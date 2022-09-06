@@ -22,7 +22,6 @@ class Stack:
       cout<<"Stack Underflow"<<endl;
       else {
         struct Node* temp = top;
-        cout<<"The popped element is "<< top->data <<endl;
         top = top->next;
         free (temp);
       }
