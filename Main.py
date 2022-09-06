@@ -3,35 +3,29 @@ class Node:
     self.data = data
     self.next = None
 
-
 class Stack:
   def __init__(self):
     self.head = None
 
   def push(self, data) -> None:
-    {
-      newnode->data = val;
-      newnode->next = top;
-      top = newnode;
-    }
+    newnode = Node(data)
+    newnode.next = self.head
+    self.head = newnode
 
   def pop(self) -> None:
-    {
-      if(top==NULL)
-      cout<<"Stack Underflow"<<endl;
-      else {
-        struct Node* temp = top;
-        top = top->next;
-        free (temp);
-      }
-    }
-
+    if(self.head!=None):
+      temp = self.head
+      self.head = temp.next
+  
   def status(self):
-    """
-    It prints all the elements of stack.
-    """
-    # Write your code here  
-
+    if(self.head  != None):
+      temp = self.head
+      while temp.next!= None:
+        print(temp.data, end = "")
+        print("=>", end = "")
+        temp = temp.next
+      print(temp.data, end = "=>")  
+    print("None")
 
 # Do not change the following code
 stack = Stack()
