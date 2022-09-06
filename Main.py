@@ -17,7 +17,16 @@ class Stack:
     }
 
   def pop(self) -> None:
-    # Write your code here
+    {
+      if(top==NULL)
+      cout<<"Stack Underflow"<<endl;
+      else {
+        struct Node* temp = top;
+        cout<<"The popped element is "<< top->data <<endl;
+        top = top->next;
+        free (temp);
+      }
+    }
 
   def status(self):
     """
