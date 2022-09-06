@@ -10,7 +10,6 @@ class Stack:
 
   def push(self, data) -> None:
     {
-      struct Node* newnode = (struct Node*) malloc(sizeof(struct Node));
       newnode->data = val;
       newnode->next = top;
       top = newnode;
